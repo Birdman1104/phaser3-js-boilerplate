@@ -1,7 +1,7 @@
 {
   "name": "phaser3-js-boilerplate",
   "version": "1.0.0",
-  "description": "Phaser3 Boilerplate",
+  "description": "Phaser3 Javascript Boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.dev.js",
@@ -10,6 +10,13 @@
   },
   "author": "Arsen Mazmanyan",
   "license": "ISC",
+  "keywords": [
+    "Phaser3",
+    "phaser",
+    "Javascript",
+    "Boilerplate",
+    "HTML5 Game"
+  ],
   "dependencies": {
     "phaser": "^3.55.2"
   },
