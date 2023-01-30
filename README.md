@@ -5,11 +5,7 @@ This is a Phaser3 Javascript Boilerplate, made with Webpack 5
 
 ## Usage
 
-1 - ```bash
-npm i
-```
-2 -  ```bash
-npm start
-```
+1 - npm i
+2 - npm start
 
 To be improved
