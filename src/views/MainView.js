@@ -1,24 +1,27 @@
 export class MainView extends Phaser.GameObjects.Container {
+    #logo
+    #emitter
+    
     constructor(scene) {
         super(scene);
-        this._build();
+        this.#build();
     }
 
-    _build() {
-        this._buildEmitter();
-        this._buildLogo();
+    #build() {
+        this.#buildEmitter();
+        this.#buildLogo();
     }
 
-    _buildLogo() {
+    #buildLogo() {
         const logo = this.scene.physics.add.image(100, 100, "logo.png");
         logo.setVelocity(200, 200);
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
-        this.logo = logo;
-        this.emitter.startFollow(this.logo);
+        this.#logo = logo;
+        this.#emitter.startFollow(this.#logo);
     }
 
-    _buildEmitter() {
+    #buildEmitter() {
         const particles = this.scene.add.particles("particle.png");
         const emitter = particles.createEmitter({
             speed: 100,
@@ -26,6 +29,6 @@ export class MainView extends Phaser.GameObjects.Container {
             alpha: { start: 1, end: 0 },
             blendMode: "ADD",
         });
-        this.emitter = emitter;
+        this.#emitter = emitter;
     }
 }
