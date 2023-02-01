@@ -9,16 +9,16 @@ export class PreloadScene extends Phaser.Scene {
         this.load.image("logo.png", "src/assets/logo.png");
         this.load.image("particle.png", "src/assets/particle.png");
 
-        this.load.on("progress", this._onFileLoadComplete, this);
-        this.load.on("complete", this._onLoadComplete, this);
+        this.load.on("progress", this.#onFileLoadComplete, this);
+        this.load.on("complete", this.#onLoadComplete, this);
         this.load.start();
     }
 
-    _onFileLoadComplete(progress) {
+    #onFileLoadComplete(progress) {
         console.log("LOAD_PROGRESS", progress);
     }
 
-    _onLoadComplete() {
+    #onLoadComplete() {
         this.game.scene.stop(Scenes.Preload);
         this.game.scene.start(Scenes.Boot);
     }

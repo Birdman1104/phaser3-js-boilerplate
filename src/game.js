@@ -8,11 +8,11 @@ export class Game extends Phaser.Game {
   constructor(gameConfig) {
     super(gameConfig);
 
-    this._initializeScenes();
+    this.#initializeScenes();
     this.scene.start(Scenes.Preload);
   }
 
-  _initializeScenes() {
+  #initializeScenes() {
     this.scene.add(Scenes.Preload, new PreloadScene());
     this.scene.add(Scenes.Boot, new BootScene());
     this.scene.add(Scenes.Game, new GameScene());
